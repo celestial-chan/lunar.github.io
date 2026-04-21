@@ -1,2 +1,2 @@
 # lunar.github.io
-just a website idk
+yo chat is this website up yo
