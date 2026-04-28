@@ -1,77 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>lyra</title>
-
-  <!-- Link CSS -->
+  <meta charset="UTF-8">
+  <title>lyra hub</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Pixel font -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 3rem;
+      color: #6d4aa6;
+      text-shadow: 0 0 20px rgba(190,120,255,0.6);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      opacity: 0.7;
+      margin-bottom: 30px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      width: 180px;
+      padding: 15px;
+      border-radius: 14px;
+      background: rgba(250, 245, 255, 0.7);
+      border: 1px solid rgba(180, 140, 255, 0.3);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 6px 20px rgba(170,120,255,0.2);
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(170,120,255,0.35);
+    }
+
+    .card h3 {
+      margin: 0;
+      color: #4b2a7a;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 
 <body>
-<div style="
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: radial-gradient(circle at 20% 30%, rgba(0,255,255,0.15), transparent 40%),
-            radial-gradient(circle at 80% 70%, rgba(0,150,255,0.15), transparent 40%);
-z-index: -1;">
-</div>
-  <h1>LYRA PROFILE</h1>
-  <p class="tag">status: online</p>
 
-  <hr />
+  <div class="title">lyra hub</div>
+  <div class="subtitle">pick where you want to go</div>
 
-  <div class="box">
-    <h2>> stats</h2>
-    <p class="stat">username: Lunar_Chan</p>
-    <p class="stat">class: gamer</p>
-    <p class="stat">level: ???</p>
-    <p class="stat">coins: broke</p>
-    <p class="stat">projects completed: 0</p>
+  <div class="menu">
+
+    <div class="card" onclick="go('main.html')">
+      <h3>profile</h3>
+      <p>about me & stats</p>
+    </div>
+
+    <div class="card" onclick="go('projects.html')">
+      <h3>projects</h3>
+      <p>stuff I made</p>
+    </div>
+
+    <div class="card" onclick="go('skyblock.html')">
+      <h3>skyblock</h3>
+      <p>game stats + flex</p>
+    </div>
+
   </div>
 
-  <div class="box">
-    <h2>> skills</h2>
-    <p class="stat"><span class="common">common:</span> HTML</p>
-    <p class="stat"><span class="uncommon">uncommon:</span> CSS</p>
-    <p class="stat"><span class="rare">rare:</span> JavaScript (in progress)</p>
-    <p class="stat"><span class="epic">epic:</span> procrastination</p>
-  </div>
-
-  <div class="box">
-    <h2>> quests</h2>
-    <p>nothing here yet. still grinding.</p>
-  </div>
-
-  <div class="box">
-    <h2>> inventory</h2>
-    <ul>
-      <li>
-        <a href="https://sky.shiiyu.moe/stats/Lunar_Chan_/Orange" target="_blank">
-          skyblock stats
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h2>> logs</h2>
-    <p>[04/29] made this site</p>
-    <p>[04/29] still no projects</p>
-    <p>[??/??] maybe one day i'll update this</p>
-  </div>
-
-  <hr />
-
-  <img src="image/larp.png" alt="lyra image">
-
-  <p class="tag">skyblock themed. still under construction.</p>
+  <script>
+    function go(page) {
+      window.location.href = page;
+    }
+  </script>
 
 </body>
 </html>
