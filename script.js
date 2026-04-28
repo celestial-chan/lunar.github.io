@@ -1,11 +1,11 @@
-
 // ================= PAGE SWITCH =================
 function switchPage(pageId) {
   document.querySelectorAll('.page').forEach(p => {
     p.classList.remove('active');
   });
 
-  document.getElementById(pageId).classList.add('active');
+  const target = document.getElementById(pageId);
+  if (target) target.classList.add('active');
 }
 
 // ================= SPLASH TEXT =================
@@ -13,11 +13,12 @@ function switchPage(pageId) {
 window.onload = () => {
   const words = [
     "old skyblock gamer",
-    "vibe coder "alledgedly"",
+    "vibe coder (allegedly)",
     "potential man",
     "out of splash text ideas",
     "please help",
     "frutiger aero core",
+    "2000s UI enjoyer"
   ];
 
   const el = document.getElementById("splashtext");
@@ -40,8 +41,20 @@ document.addEventListener("change", (e) => {
 // ================= CLICK SOUND =================
 
 const clickSound = new Audio("https://www.myinstants.com/media/sounds/minecraft-click.mp3");
+clickSound.volume = 0.4;
+
+// fix autoplay restrictions by only playing after first interaction
+let soundUnlocked = false;
+
+function unlockSound() {
+  soundUnlocked = true;
+}
+
+document.addEventListener("click", unlockSound, { once: true });
 
 function playClick() {
+  if (!soundUnlocked) return;
+
   clickSound.currentTime = 0;
-  clickSound.play();
+  clickSound.play().catch(() => {});
 }
