@@ -4,6 +4,124 @@
   <meta charset="UTF-8">
   <title>lyra hub</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- ================= SPLASH ================= -->
+<div id="startpg" class="page active">
+  <div class="splash">
+
+    <h1 class="title">lyra hub</h1>
+    <p id="splashtext" class="subtitle">booting personality...</p>
+
+    <div class="menu">
+
+      <div class="card" onclick="switchPage('homepg')">
+        <h3>enter world</h3>
+        <p>main profile</p>
+      </div>
+
+      <div class="card" onclick="switchPage('info')">
+        <h3>about me</h3>
+        <p>the player behind the screen</p>
+      </div>
+
+      <div class="card" onclick="switchPage('minecraft')">
+        <h3>skyblock</h3>
+        <p>grinding addiction stats</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= HOME ================= -->
+<div id="homepg" class="page">
+  <h1>home</h1>
+
+  <p>welcome to my little corner of the internet</p>
+  <p>i code, i game, i procrastinate, repeat.</p>
+
+  <button onclick="switchPage('info')">about me</button>
+  <button onclick="switchPage('minecraft')">skyblock stuff</button>
+  <button onclick="switchPage('projects')">projects</button>
+  <button onclick="switchPage('settingspg')">settings</button>
+</div>
+
+<!-- ================= INFO ================= -->
+<div id="info" class="page">
+  <h1>about me</h1>
+
+  <p>
+    just a random guy on the internet who codes stuff when bored and plays too much minecraft.
+  </p>
+
+  <p>
+    sometimes I build things. sometimes I break them. usually both.
+  </p>
+
+  <p>
+    mostly here for vibes, learning, and random projects that go nowhere 👍
+  </p>
+
+  <button onclick="window.open('https://github.com/', '_blank')">github</button>
+  <button onclick="switchPage('homepg')">back</button>
+</div>
+
+<!-- ================= MINECRAFT ================= -->
+<div id="minecraft" class="page">
+  <h1>minecraft</h1>
+
+  <p>skyblock / mods / texture packs / random grind addiction</p>
+
+  <p>
+    this is where all the block grinding, stats, and questionable life decisions go.
+  </p>
+
+  <button>download mod</button>
+  <button>texture packs</button>
+  <button onclick="switchPage('homepg')">back</button>
+</div>
+
+<!-- ================= PROJECTS ================= -->
+<div id="projects" class="page">
+  <h1>projects</h1>
+
+  <p>things I made when I wasn’t distracted</p>
+
+  <ul>
+    <li>random websites</li>
+    <li>unfinished ideas</li>
+    <li>stuff that “will be updated later” (never is)</li>
+  </ul>
+
+  <button onclick="switchPage('homepg')">back</button>
+</div>
+
+<!-- ================= SETTINGS ================= -->
+<div id="settingspg" class="page">
+  <h1>settings</h1>
+
+  <label>
+    <input type="checkbox" id="skip">
+    skip splash screen
+  </label>
+
+  <p>quality of life options (very advanced system trust me)</p>
+
+  <button onclick="switchPage('homepg')">back</button>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lyra hub</title>
+  <link rel="stylesheet" href="style.css">
 
   <style>
     body {
