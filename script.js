@@ -18,6 +18,7 @@ window.onload = () => {
     "potential man",
     "out of splash text ideas",
     "please help",
+    "frutiger aero core",
   ];
 
   const el = document.getElementById("splashtext");
