@@ -9,7 +9,6 @@ function switchPage(pageId) {
 }
 
 // ================= SPLASH TEXT =================
-
 window.onload = () => {
   const words = [
     "old skyblock gamer",
@@ -27,13 +26,10 @@ window.onload = () => {
   }
 
   const skip = localStorage.getItem("skip") === "true";
-
-  // FIX: now correctly matches your merged hub id
-  if (skip) switchPage("hub");
+  if (skip) switchPage("hub"); // IMPORTANT FIX
 };
 
 // ================= SETTINGS =================
-
 document.addEventListener("change", (e) => {
   if (e.target.id === "skip") {
     localStorage.setItem("skip", e.target.checked);
@@ -41,27 +37,17 @@ document.addEventListener("change", (e) => {
 });
 
 // ================= CLICK SOUND =================
-
-const clickSound = new Audio(
-  "https://www.myinstants.com/media/sounds/minecraft-click.mp3"
-);
-
+const clickSound = new Audio("https://www.myinstants.com/media/sounds/minecraft-click.mp3");
 clickSound.volume = 0.4;
 
-// unlock audio only after first user interaction (browser requirement)
 let soundUnlocked = false;
 
-document.addEventListener(
-  "click",
-  () => {
-    soundUnlocked = true;
-  },
-  { once: true }
-);
+document.addEventListener("click", () => {
+  soundUnlocked = true;
+}, { once: true });
 
 function playClick() {
   if (!soundUnlocked) return;
-
   clickSound.currentTime = 0;
   clickSound.play().catch(() => {});
 }
