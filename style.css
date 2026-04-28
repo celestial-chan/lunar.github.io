@@ -1,69 +1,100 @@
 body {
-  background-color: #0b0f1a;
-  color: #e6e6e6;
+  background: linear-gradient(135deg, #0b0f1a, #0a1f3d, #003366);
+  color: #e6faff;
   font-family: monospace;
   max-width: 800px;
   margin: 50px auto;
   line-height: 1.6;
 }
 
+/* Title */
 h1 {
   font-family: 'Press Start 2P', monospace;
   font-size: 26px;
   margin-bottom: 10px;
+  color: #66e0ff;
+  text-shadow: 0 0 10px #00ccff, 0 0 20px #0099ff;
 }
 
+/* Section titles */
 h2 {
-  color: #7CFC00;
+  color: #00e5ff;
   margin-top: 30px;
   font-size: 18px;
+  text-shadow: 0 0 8px #00e5ff;
 }
 
+/* Text */
 p {
-  color: #bfbfbf;
+  color: #ccf7ff;
 }
 
+/* Divider */
 hr {
   border: none;
-  border-top: 1px solid #2a2a2a;
+  border-top: 1px solid rgba(0,255,255,0.2);
   margin: 30px 0;
 }
 
+/* Links */
 a {
-  color: #55aaff;
+  color: #33ccff;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #99f0ff;
+  text-shadow: 0 0 5px #00e5ff;
 }
 
+/* Boxes (glassy effect) */
+.box {
+  border: 1px solid rgba(0,255,255,0.2);
+  padding: 15px;
+  border-radius: 12px;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 150, 255, 0.15),
+    rgba(0, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.15);
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+/* Hover glow */
+.box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+/* Stats */
 .stat {
   margin: 5px 0;
 }
 
-.common { color: #aaaaaa; }
-.uncommon { color: #55ff55; }
-.rare { color: #5555ff; }
-.epic { color: #aa00aa; }
-.legendary { color: #ffaa00; }
+/* Rarity colors (more vibrant) */
+.common { color: #b0c4de; }
+.uncommon { color: #00ffcc; }
+.rare { color: #3399ff; }
+.epic { color: #cc66ff; }
+.legendary { 
+  color: #ffcc33; 
+  text-shadow: 0 0 8px #ffcc33;
+}
 
+/* Image */
 img {
   width: 100%;
   max-width: 300px;
   margin-top: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.4);
 }
 
+/* Small text */
 .tag {
   font-size: 14px;
-  color: #888;
-}
-
-.box {
-  border: 1px solid #222;
-  padding: 15px;
-  border-radius: 10px;
-  background: #0f1629;
-  margin-bottom: 20px;
+  color: #99e6ff;
 }
