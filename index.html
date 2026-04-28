@@ -12,62 +12,28 @@
 
 <div class="bg-glow"></div>
 
-<!-- ================= HUB (ONLY PAGE) ================= -->
+<!-- ================= HUB ================= -->
 <div class="hub">
 
-  <div class="panel">
+  <h1 class="title">lyra hub</h1>
+  <p id="splashtext" class="subtitle">loading world...</p>
 
-    <h1 class="title">lyra hub</h1>
+  <!-- MENU -->
+  <div class="menu">
 
-    <!-- splash text becomes loading intro -->
-    <p id="splashtext" class="subtitle">loading world...</p>
-
-    <!-- MENU ALWAYS SAME PAGE -->
-    <div class="menu">
-
-      <div class="card" onclick="go('info')">profile</div>
-      <div class="card" onclick="go('minecraft')">skyblock</div>
-      <div class="card" onclick="go('projects')">projects</div>
-      <div class="card" onclick="go('settings')">settings</div>
-
-    </div>
+    <div class="card" onclick="showPage('info')">profile</div>
+    <div class="card" onclick="showPage('skyblock')">skyblock</div>
+    <div class="card" onclick="showPage('projects')">projects</div>
+    <div class="card" onclick="showPage('settings')">settings</div>
 
   </div>
 
-  <!-- ================= SECTIONS (same page, hidden blocks) ================= -->
+  <!-- CONTENT AREA -->
+  <div id="content" class="panel">
 
-  <div id="info" class="section hidden panel">
-    <h1>about me</h1>
-    <p>life is like roblox</p>
-    <button onclick="go('home')">back</button>
-  </div>
+    <h2>welcome</h2>
+    <p>click a button above to start</p>
 
-  <div id="minecraft" class="section hidden panel">
-    <h1>skyblock</h1>
-    <p>prison server grind</p>
-
-    <div class="image-box">
-      <img src="image/prison.png" alt="prison server">
-    </div>
-
-    <button onclick="go('home')">back</button>
-  </div>
-
-  <div id="projects" class="section hidden panel">
-    <h1>projects</h1>
-    <p>I forgor 💀</p>
-    <button onclick="go('home')">back</button>
-  </div>
-
-  <div id="settings" class="section hidden panel">
-    <h1>settings</h1>
-
-    <label>
-      <input type="checkbox" id="skip">
-      skip loading text
-    </label>
-
-    <button onclick="go('home')">back</button>
   </div>
 
 </div>
