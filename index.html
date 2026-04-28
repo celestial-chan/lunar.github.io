@@ -10,6 +10,8 @@
 
 <body>
 
+<div class="bg-glow"></div>
+
 <!-- ================= SPLASH ================= -->
 <div id="startpg" class="page active">
 
@@ -20,19 +22,16 @@
 
     <div class="menu">
 
-      <div class="card" onclick="playClick(); switchPage('homepg')">
-        <h3>singleplayer</h3>
-        <p>enter hub</p>
+      <div class="card" onclick="switchPage('homepg')">
+        singleplayer
       </div>
 
-      <div class="card" onclick="playClick(); switchPage('info')">
-        <h3>profile</h3>
-        <p>about me</p>
+      <div class="card" onclick="switchPage('info')">
+        profile
       </div>
 
-      <div class="card" onclick="playClick(); switchPage('minecraft')">
-        <h3>skyblock</h3>
-        <p>grind stats</p>
+      <div class="card" onclick="switchPage('minecraft')">
+        skyblock
       </div>
 
     </div>
@@ -42,56 +41,100 @@
 
 <!-- ================= HOME ================= -->
 <div id="homepg" class="page">
-  <h1>home</h1>
 
-  <button onclick="playClick(); switchPage('info')">about me</button>
-  <button onclick="playClick(); switchPage('minecraft')">minecraft</button>
-  <button onclick="playClick(); switchPage('projects')">projects</button>
-  <button onclick="playClick(); switchPage('settingspg')">settings</button>
+  <div class="panel">
+
+    <h1 class="title">home</h1>
+    <p class="subtitle">welcome to the hub</p>
+
+    <div class="menu">
+      <div class="card" onclick="switchPage('info')">about me</div>
+      <div class="card" onclick="switchPage('minecraft')">minecraft</div>
+      <div class="card" onclick="switchPage('projects')">projects</div>
+      <div class="card" onclick="switchPage('settingspg')">settings</div>
+    </div>
+
+  </div>
+
 </div>
 
 <!-- ================= INFO ================= -->
 <div id="info" class="page">
-  <h1>about me</h1>
 
-  <p>just a coder + gamer who builds random things at 2am</p>
-  <p>mostly minecraft, websites, and chaos</p>
+  <div class="panel">
 
-  <button onclick="playClick(); switchPage('homepg')">back</button>
+    <h1 class="title">profile</h1>
+
+    <p>just a coder + gamer who builds random things at 2am</p>
+    <p>minecraft grind + web dev chaos</p>
+
+    <button onclick="switchPage('homepg')">back</button>
+
+  </div>
+
 </div>
 
 <!-- ================= MINECRAFT ================= -->
 <div id="minecraft" class="page">
-  <h1>minecraft</h1>
 
-  <p>skyblock grind zone</p>
+  <div class="panel">
 
-  <button onclick="playClick(); switchPage('homepg')">back</button>
+    <h1 class="title">skyblock</h1>
+
+    <p>grinding simulator</p>
+
+    <div class="menu">
+      <button>stats</button>
+      <button>mods</button>
+      <button>texture packs</button>
+    </div>
+
+    <button onclick="switchPage('homepg')">back</button>
+
+  </div>
+
 </div>
 
 <!-- ================= PROJECTS ================= -->
 <div id="projects" class="page">
-  <h1>projects</h1>
 
-  <p>unfinished ideas + experiments</p>
+  <div class="panel">
 
-  <button onclick="playClick(); switchPage('homepg')">back</button>
+    <h1 class="title">projects</h1>
+
+    <p>unfinished chaos & experiments</p>
+
+    <ul>
+      <li>random websites</li>
+      <li>half finished ideas</li>
+      <li>things I forgot about</li>
+    </ul>
+
+    <button onclick="switchPage('homepg')">back</button>
+
+  </div>
+
 </div>
 
 <!-- ================= SETTINGS ================= -->
 <div id="settingspg" class="page">
-  <h1>settings</h1>
 
-  <label>
-    <input type="checkbox" id="skip">
-    skip splash
-  </label>
+  <div class="panel">
 
-  <button onclick="switchPage('homepg')">back</button>
+    <h1 class="title">settings</h1>
+
+    <label>
+      <input type="checkbox" id="skip">
+      skip splash screen
+    </label>
+
+    <br><br>
+
+    <button onclick="switchPage('homepg')">back</button>
+
+  </div>
+
 </div>
-
-<!-- ambient particles -->
-<div class="bg-glow"></div>
 
 </body>
 </html>
