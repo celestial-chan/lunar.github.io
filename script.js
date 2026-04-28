@@ -13,12 +13,11 @@ function switchPage(pageId) {
 
 window.onload = () => {
   const words = [
-    "loading skyblock...",
-    "Comic Sans regret...",
-    "mining diamonds...",
-    "frutiger aero vibes",
-    "hypixel energy",
-    "gaming moment"
+    "old skyblock gamer",
+    "vibe coder "alledgedly"",
+    "potential man",
+    "out of splash text ideas",
+    "please help",
   ];
 
   const el = document.getElementById("splashtext");
