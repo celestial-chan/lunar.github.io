@@ -1,41 +1,56 @@
-// ================= FAKE LOADING TEXT =================
+// ================= SPLASH TEXT =================
 window.onload = () => {
   const words = [
-    "loading world...",
     "old skyblock gamer",
+    "vibe coder (allegedly)",
+    "2000s UI enjoyer",
     "frutiger aero core",
-    "vibe coding (allegedly)",
-    "2000s UI enjoyer"
+    "grinding pixels..."
   ];
 
   const el = document.getElementById("splashtext");
-
-  const skip = localStorage.getItem("skip") === "true";
-
-  if (el && !skip) {
+  if (el) {
     el.textContent = words[Math.floor(Math.random() * words.length)];
-  }
-
-  if (skip && el) {
-    el.textContent = "lyra hub ready.";
   }
 };
 
-// ================= SECTION SWITCH =================
-function go(page) {
-  const sections = document.querySelectorAll(".section");
+// ================= PAGE SWITCH =================
+function showPage(page) {
+  const content = document.getElementById("content");
 
-  sections.forEach(s => s.classList.add("hidden"));
-
-  if (page === "home") return;
-
-  const target = document.getElementById(page);
-  if (target) target.classList.remove("hidden");
-}
-
-// ================= SETTINGS =================
-document.addEventListener("change", (e) => {
-  if (e.target.id === "skip") {
-    localStorage.setItem("skip", e.target.checked);
+  if (page === "info") {
+    content.innerHTML = `
+      <h2>profile</h2>
+      <p>life is like roblox</p>
+      <p>just a coder + gamer doing random stuff</p>
+    `;
   }
-});
+
+  if (page === "skyblock") {
+    content.innerHTML = `
+      <h2>skyblock</h2>
+      <p>prison server grind</p>
+
+      <div class="image-box">
+        <img src="image/prison.png" alt="prison server">
+      </div>
+    `;
+  }
+
+  if (page === "projects") {
+    content.innerHTML = `
+      <h2>projects</h2>
+      <p>I forgor 💀</p>
+    `;
+  }
+
+  if (page === "settings") {
+    content.innerHTML = `
+      <h2>settings</h2>
+      <label>
+        <input type="checkbox" id="skip">
+        skip splash text
+      </label>
+    `;
+  }
+}
